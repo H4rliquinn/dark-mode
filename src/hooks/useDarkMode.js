@@ -3,6 +3,7 @@ import {useLocalStorage} from "./useLocalStorage";
 
 export const useDarkMode = (initState) => {
     const [value,setValue]=useLocalStorage('darkMode',initState);
+    // setValue('darkMode',)
     useEffect(()=>{
         if (value){
             if (!document.body.classList.contains('dark-mode')){document.body.classList.add('dark-mode');};
