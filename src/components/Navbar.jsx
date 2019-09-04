@@ -12,6 +12,10 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
       <Link to="/">Top 10 Coins</Link>
+      <Link to="/doge">Dogecoin</Link>
+      <Link to="/abyss">Abyss</Link>
+      <Link to="/mithril">Mithril</Link>
+      <Link to="/bitcoen">Bitcoen</Link>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
