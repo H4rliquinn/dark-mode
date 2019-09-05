@@ -8,6 +8,7 @@ const Navbar = (props) => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
+  // console.log("NavDS",localStorage.getItem('darkMode'),darkMode);
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
@@ -16,7 +17,7 @@ const Navbar = (props) => {
       <Link to="/abyss" onClick={()=>props.cb("/abyss")} className="navLink">Abyss</Link>
       <Link to="/mithril" onClick={()=>props.cb("/mithril")} className="navLink">Mithril</Link>
       <Link to="/bitcoen" onClick={()=>props.cb("/bitcoen")} className="navLink">Bitcoen</Link>
-      <div className="dark-mode__toggle">
+      <div className={`dark-mode__toggle`}>
         <div
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}

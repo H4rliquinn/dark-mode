@@ -3,15 +3,14 @@ import {useLocalStorage} from "./useLocalStorage";
 
 export const useDarkMode = (initState) => {
     const [value,setValue]=useLocalStorage('darkMode',initState);
-    // setValue('darkMode',)
     useEffect(()=>{
+        console.log("Dark",value)
         if (value){
             if (!document.body.classList.contains('dark-mode')){document.body.classList.add('dark-mode');};
             const linkSelector=document.querySelectorAll(".navLink");
             linkSelector.forEach(item=>{
                 item.classList.add("navLinkDark");
             });
-            // console.log(linkSelector);
         } else {
             if (document.body.classList.contains('dark-mode')){document.body.classList.remove('dark-mode');};
             const linkSelector=document.querySelectorAll(".navLink");
